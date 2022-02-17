@@ -83,7 +83,7 @@ function M.generate(opt)
   local uniform_diff_background = opt.uniform_diff_background and "#3B4252" or "#2E3440"
 
   local result = [[
-" nord-vim Lua version: ]] .. M.mtime() .. [[ opt: ]] .. opt_string .. [[
+" nord-vim opt: ]] .. opt_string .. [[
 
 let g:colors_name = 'nord'
 set background=dark
