@@ -533,7 +533,7 @@ end
 
 function M.save(text)
   local filename = M.filename()
-  local colors_dir = filename:gsub [[/nord.vim$]]
+  local colors_dir = filename:gsub([[/nord.vim$]], '', 1)
   local st = uv.fs_stat(colors_dir)
   if not st or b(st.mode, S_IFDIR, b.AND) ~= S_IFDIR then
     local created = uv.fs_mkdir(colors_dir, DIR_MODE)
