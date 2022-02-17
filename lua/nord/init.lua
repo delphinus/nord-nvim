@@ -527,7 +527,7 @@ function M.this_file()
 end
 
 function M.filename()
-  local top_dir = M.this_file():gsub([[/lua/nord.lua]], "", 1)
+  local top_dir = M.this_file():gsub([[/lua/nord/init.lua$]], "", 1)
   return top_dir .. "/colors/nord.vim"
 end
 
@@ -536,7 +536,11 @@ function M.save(text)
   local colors_dir = filename:gsub [[/nord.vim$]]
   local st = uv.fs_stat(colors_dir)
   if not st or b(st.mode, S_IFDIR, b.AND) ~= S_IFDIR then
-    uv.fs_mkdir(colors_dir, DIR_MODE)
+    local created = uv.fs_mkdir(colors_dir, DIR_MODE)
+    if not created then
+      M.warn("failed to create the dir: " .. colors_dir)
+      return
+    end
   end
   local fd = uv.fs_open(filename, "w", tonumber("644", 8))
   return uv.fs_write(fd, text)
