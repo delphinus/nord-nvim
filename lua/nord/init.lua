@@ -345,19 +345,20 @@ hi LspDiagnosticsUnderlineHint guifg=#5E81AC gui=undercurl
 
 " tree-sitter
 " > nvim-treesitter/nvim-treesitter
-hi! link TSAnnotation Annotation
-hi! link TSConstBuiltin Constant
-hi! link TSConstructor Function
-hi! link TSEmphasis Italic
-hi! link TSFuncBuiltin Function
-hi! link TSFuncMacro Function
-hi! link TSStringRegex SpecialChar
-hi! link TSStrong Bold
-hi! link TSStructure Structure
-hi! link TSTagDelimiter TSTag
-hi! link TSUnderline Underline
-hi! link TSVariable Variable
-hi! link TSVariableBuiltin Keyword
+hi! link @annotation Annotation
+hi! link @constant Constant
+hi! link @constant.builtin Constant
+hi! link @constant.macro Constant
+hi! link @constructor Function
+hi! link @function Function
+hi! link @function.macro Function
+hi! link @string.regex SpecialChar
+hi! link @tag.delimiter TSTag
+hi! link @text.emphasis Italic
+hi! link @text.strong Bold
+hi! link @text.underline Underline
+hi! link @variable Variable
+hi! link @variable.builtin Keyword
 ]]
 
   -- This is not needed when you enable tree-sitter highlighting.
