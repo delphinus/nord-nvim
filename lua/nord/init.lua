@@ -354,9 +354,9 @@ hi LspDiagnosticsUnderlineHint guifg=#5E81AC gui=undercurl
 "hi! link @function.macro Function
 "hi! link @string.regex SpecialChar
 "hi! link @tag.delimiter TSTag
-"hi! link @text.emphasis Italic
-"hi! link @text.strong Bold
-"hi! link @text.underline Underline
+hi! link @text.emphasis Italic
+hi! link @text.strong Bold
+hi! link @text.underline Underline
 "hi! link @variable Variable
 "hi! link @variable.builtin Keyword
 
