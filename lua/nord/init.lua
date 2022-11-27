@@ -345,20 +345,75 @@ hi LspDiagnosticsUnderlineHint guifg=#5E81AC gui=undercurl
 
 " tree-sitter
 " > nvim-treesitter/nvim-treesitter
-hi! link @annotation Annotation
-hi! link @constant Constant
-hi! link @constant.builtin Constant
-hi! link @constant.macro Constant
-hi! link @constructor Function
-hi! link @function Function
-hi! link @function.macro Function
-hi! link @string.regex SpecialChar
-hi! link @tag.delimiter TSTag
+"hi! link @annotation Annotation
+"hi! link @constant Constant
+"hi! link @constant.builtin Constant
+"hi! link @constant.macro Constant
+"hi! link @constructor Function
+"hi! link @function Function
+"hi! link @function.macro Function
+"hi! link @string.regex SpecialChar
+"hi! link @tag.delimiter TSTag
 hi! link @text.emphasis Italic
 hi! link @text.strong Bold
 hi! link @text.underline Underline
+"hi! link @variable Variable
+"hi! link @variable.builtin Keyword
+
+hi @annotation guifg=#D08770
+hi @constructor guifg=#81A1C1
+hi @constant guifg=#EBCB8B
+hi @float guifg=#B48EAD
+hi @number guifg=#B48EAD
+
+hi @attribute guifg=#B48EAD
 hi! link @variable Variable
-hi! link @variable.builtin Keyword
+hi! link @variable.builtin Variable
+hi @boolean guifg=#81A1C1 gui=bold
+hi @constant.builtin guifg=#8FBCBB gui=bold
+hi @constant.macro guifg=#8FBCBB gui=bold
+hi @error guifg=#BF616A
+hi @exception guifg=#B48EAD
+hi @function.macro guifg=#8FBCBB
+hi @include guifg=#81A1C1
+hi @label guifg=#B48EAD
+hi @operator guifg=#81A1C1
+hi @parameter guifg=#5E81AC
+hi @parameter.reference guifg=#5E81AC
+hi @punctutation.delimiter guifg=#88C0D0
+hi @punctutation.bracket guifg=#88C0D0
+hi @punctutation.special guifg=#88C0D0
+hi @symbol guifg=#B48EAD
+hi @type guifg=#81A1C1
+hi @type.builtin guifg=#81A1C1
+hi @tag guifg=#D8DEE9
+hi @tag.delimiter guifg=#B48EAD
+hi @text guifg=#D8DEE9
+hi @text.reference guifg=#B48EAD
+hi @text.emphasis guifg=#5E81AC
+hi @text.underline guifg=#D8DEE9 guibg=NONE gui=underline
+hi @text.title guifg=#5E81AC guibg=NONE gui=bold
+hi @text.literal guifg=#D8DEE9
+hi @text.uri guifg=#A3BE8C
+"hi @annotation guifg=#BF616A
+
+hi @comment guifg=#616E88 gui=italic
+hi @conditional guifg=#81A1C1 gui=italic
+hi @function guifg=#88C0D0 gui=italic
+hi @method guifg=#8FBCBB gui=italic
+hi @function.builtin guifg=#88C0D0 gui=italic
+hi @namespace guifg=#D8DEE9 gui=italic
+hi @field guifg=#D8DEE9 gui=italic
+hi @property guifg=#5E81AC gui=italic
+hi @keyword guifg=#81A1C1 gui=italic
+hi @keyword.function guifg=#88C0D0 gui=italic
+hi @keyword.return guifg=#88C0D0 gui=italic
+hi @keyword.operator guifg=#88C0D0 gui=italic
+hi @repeat guifg=#81A1C1 gui=italic
+hi @string guifg=#A3BE8C gui=italic
+hi @string.regex guifg=#8FBCBB gui=italic
+hi @string.escape guifg=#B48EAD gui=italic
+hi @character guifg=#A3BE8C gui=italic
 ]]
 
   -- This is not needed when you enable tree-sitter highlighting.
@@ -534,7 +589,7 @@ end
 
 function M.save(text)
   local filename = M.filename()
-  local colors_dir = filename:gsub([[/nord.vim$]], '', 1)
+  local colors_dir = filename:gsub([[/nord.vim$]], "", 1)
   local st = uv.fs_stat(colors_dir)
   if not st then
     local created = uv.fs_mkdir(colors_dir, DIR_MODE)
