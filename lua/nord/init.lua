@@ -393,7 +393,8 @@ hi @text.reference guifg=#B48EAD
 hi @text.emphasis guifg=#5E81AC
 hi @text.underline guifg=#D8DEE9 guibg=NONE gui=underline
 hi @text.title guifg=#5E81AC guibg=NONE gui=bold
-hi @text.literal guifg=#D8DEE9
+"hi @text.literal guifg=#D8DEE9
+hi @text.literal guifg=#8FBCBB
 hi @text.uri guifg=#A3BE8C
 "hi @annotation guifg=#BF616A
 
