@@ -401,7 +401,7 @@ hi @text.uri guifg=#A3BE8C
 hi @comment guifg=#616E88 gui=italic
 hi @conditional guifg=#81A1C1 gui=italic
 hi @function guifg=#88C0D0 gui=italic
-hi @method guifg=#8FBCBB gui=italic
+hi @method guifg=#B48EAD gui=italic
 hi @function.builtin guifg=#88C0D0 gui=italic
 hi @namespace guifg=#D8DEE9 gui=italic
 hi @field guifg=#D8DEE9 gui=italic
@@ -415,6 +415,10 @@ hi @string guifg=#A3BE8C gui=italic
 hi @string.regex guifg=#8FBCBB gui=italic
 hi @string.escape guifg=#B48EAD gui=italic
 hi @character guifg=#A3BE8C gui=italic
+
+" semantic tokens
+hi @declaration guifg=#ebcb8b
+hi @defaultLibrary guifg=#d08770
 ]]
 
   -- This is not needed when you enable tree-sitter highlighting.
