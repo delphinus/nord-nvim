@@ -405,7 +405,7 @@ hi @method guifg=#B48EAD gui=italic
 hi @function.builtin guifg=#88C0D0 gui=italic
 hi @namespace guifg=#D8DEE9 gui=italic
 hi @field guifg=#D8DEE9 gui=italic
-hi @property guifg=#5E81AC gui=italic
+hi @property guifg=#D8DEE9 gui=italic
 hi @keyword guifg=#81A1C1 gui=italic
 hi @keyword.function guifg=#88C0D0 gui=italic
 hi @keyword.return guifg=#88C0D0 gui=italic
