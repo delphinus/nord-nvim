@@ -123,6 +123,18 @@ hi healthError guifg=#BF616A guibg=#3B4252
 hi healthSuccess guifg=#A3BE8C guibg=#3B4252
 hi healthWarning guifg=#EBCB8B guibg=#3B4252
 hi TermCursorNC guibg=#3B4252
+hi NormalFloat guifg=#D8DEE9 guibg=#2E3440
+hi FloatShadow guibg=#434C5E
+hi FloatShadowThrough guibg=#434C5E
+hi RedrawDebugClear guibg=#EBCB8B
+hi RedrawDebugComposed guibg=#A3BE8C
+hi RedrawDebugRecompose guibg=#BF616A
+hi QuickFixLine guifg=#88C0D0
+hi DiagnosticOk guifg=#88C0D0
+hi DiagnosticUnderlineOk guisp=#A3BE8C
+hi DiagnosticDeprecated guisp=#BF616A
+hi WinBar guibg=#2E3440
+hi WinBarNC guibg=#2E3440
 
 " Neovim Terminal Colors
 let g:terminal_color_0 = '#3B4252'
@@ -188,6 +200,7 @@ hi WildMenu guifg=#88C0D0 guibg=#3B4252
 " Search
 hi IncSearch guifg=#ECEFF4 guibg=#5E81AC
 hi Search guifg=#3B4252 guibg=#88C0D0
+hi CurSearch guifg=#3B4252 guibg=#EBCB8B
 
 " Tabs
 hi TabLine guifg=#D8DEE9 guibg=#3B4252
@@ -204,7 +217,7 @@ hi Boolean guifg=#81A1C1
 hi Character guifg=#A3BE8C
 hi Comment guifg=#616E88]] .. italic_comments .. [[
 
-hi Conceal guibg=NONE
+hi Conceal guifg=NONE guibg=NONE
 hi Conditional guifg=#81A1C1
 hi Constant guifg=#D8DEE9
 hi Decorator guifg=#D08770
