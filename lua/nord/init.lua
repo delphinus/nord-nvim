@@ -347,14 +347,20 @@ hi! link sqlSpecial Keyword
 " Neovim LSP
 " > neovim/nvim-lspconfig
 hi LspCodeLens guifg=#616E88
-hi LspDiagnosticsDefaultWarning guifg=#EBCB8B
-hi LspDiagnosticsDefaultError guifg=#BF616A
-hi LspDiagnosticsDefaultInformation guifg=#88C0D0
-hi LspDiagnosticsDefaultHint guifg=#5E81AC
-hi LspDiagnosticsUnderlineWarning guifg=#EBCB8B gui=undercurl
-hi LspDiagnosticsUnderlineError guifg=#BF616A gui=undercurl
-hi LspDiagnosticsUnderlineInformation guifg=#88C0D0 gui=undercurl
-hi LspDiagnosticsUnderlineHint guifg=#5E81AC gui=undercurl
+hi! link LspDiagnosticsDefaultWarning @comment.warning
+hi! link LspDiagnosticsDefaultError @comment.error
+hi! link LspDiagnosticsDefaultInformation @comment.info
+hi! link LspDiagnosticsDefaultHint @comment.hint
+hi  LspDiagnosticsUnderlineWarning guifg=#EBCB8B gui=undercurl
+hi  LspDiagnosticsUnderlineError guifg=#BF616A gui=undercurl
+hi  LspDiagnosticsUnderlineInformation guifg=#88C0D0 gui=undercurl
+hi  LspDiagnosticsUnderlineHint guifg=#5E81AC gui=undercurl
+
+hi @comment.error guifg=#BF616A
+hi @comment.hint guifg=#5E81AC
+hi @comment.info guifg=#88C0D0
+hi @comment.warning guifg=#EBCB8B
+hi! link @comment.todo Todo
 
 " tree-sitter
 " > nvim-treesitter/nvim-treesitter
@@ -367,16 +373,21 @@ hi LspDiagnosticsUnderlineHint guifg=#5E81AC gui=undercurl
 "hi! link @function.macro Function
 "hi! link @string.regex SpecialChar
 "hi! link @tag.delimiter TSTag
-hi! link @text.emphasis Italic
-hi! link @text.strong Bold
-hi! link @text.underline Underline
+hi! link @markup.emphasis Italic
+hi! link @markup.strong Bold
+hi! link @markup.underline Underline
 "hi! link @variable Variable
 "hi! link @variable.builtin Keyword
+hi! link @keyword.directive PreProc
+hi! link @keyword.directive.define Define
+hi! link @keyword.storage StorageClass
+hi! link @keyword.conditional Conditional
+hi @keyword.debug guifg=#616E88
 
 hi @annotation guifg=#D08770
 hi @constructor guifg=#81A1C1
 hi @constant guifg=#EBCB8B
-hi @float guifg=#B48EAD
+hi @number.float guifg=#B48EAD
 hi @number guifg=#B48EAD
 
 hi @attribute guifg=#B48EAD
@@ -385,47 +396,48 @@ hi! link @variable.builtin Variable
 hi @boolean guifg=#81A1C1 gui=bold
 hi @constant.builtin guifg=#8FBCBB gui=bold
 hi @constant.macro guifg=#8FBCBB gui=bold
-hi @error guifg=#BF616A
-hi @exception guifg=#B48EAD
+hi @keyword.exception guifg=#B48EAD
 hi @function.macro guifg=#8FBCBB
-hi @include guifg=#81A1C1
+hi @keyword.include guifg=#81A1C1
 hi @label guifg=#B48EAD
 hi @operator guifg=#81A1C1
-hi @parameter guifg=#5E81AC
-hi @parameter.reference guifg=#5E81AC
-hi @punctutation.delimiter guifg=#88C0D0
-hi @punctutation.bracket guifg=#88C0D0
-hi @punctutation.special guifg=#88C0D0
-hi @symbol guifg=#B48EAD
+hi @variable.parameter guifg=#5E81AC
+hi @variable.parameter.reference guifg=#5E81AC
+hi @punctuation.delimiter guifg=#88C0D0
+hi @punctuation.bracket guifg=#88C0D0
+hi @markup guifg=#A3BE8C
+hi @markup.list guifg=#88C0D0
+hi @markup.link.label guifg=#B48EAD
+hi @markup.link.label.symbol guifg=#B48EAD
 hi @type guifg=#81A1C1
 hi @type.builtin guifg=#81A1C1
-hi @tag guifg=#D8DEE9
+hi @tag guifg=#88C0D0
 hi @tag.delimiter guifg=#B48EAD
-hi @text guifg=#D8DEE9
-hi @text.reference guifg=#B48EAD
-hi @text.emphasis guifg=#5E81AC
-hi @text.underline guifg=#D8DEE9 guibg=NONE gui=underline
-hi @text.title guifg=#5E81AC guibg=NONE gui=bold
-"hi @text.literal guifg=#D8DEE9
-hi @text.literal guifg=#8FBCBB
-hi @text.uri guifg=#A3BE8C
+hi @markup guifg=#D8DEE9
+hi @markup.link guifg=#B48EAD
+hi @markup.emphasis guifg=#5E81AC
+hi @markup.underline guifg=#D8DEE9 guibg=NONE gui=underline
+hi @markup.heading guifg=#88C0D0 guibg=NONE gui=bold
+"hi @markup.raw guifg=#D8DEE9
+hi @markup.raw guifg=#8FBCBB
+hi @markup.link.url guifg=#5E81AC gui=underline
 "hi @annotation guifg=#BF616A
 
 hi @comment guifg=#616E88 gui=italic
 hi @conditional guifg=#81A1C1 gui=italic
 hi @function guifg=#88C0D0 gui=italic
-hi @method guifg=#B48EAD gui=italic
+hi @function.method guifg=#B48EAD gui=italic
 hi @function.builtin guifg=#88C0D0 gui=italic
-hi @namespace guifg=#D8DEE9 gui=italic
-hi @field guifg=#D8DEE9 gui=italic
+hi @module guifg=#D8DEE9 gui=italic
+hi @variable.member guifg=#88C0D0 gui=italic
 hi @property guifg=#D8DEE9 gui=italic
 hi @keyword guifg=#81A1C1 gui=italic
 hi @keyword.function guifg=#88C0D0 gui=italic
 hi @keyword.return guifg=#88C0D0 gui=italic
 hi @keyword.operator guifg=#88C0D0 gui=italic
-hi @repeat guifg=#81A1C1 gui=italic
+hi @keyword.repeat guifg=#81A1C1 gui=italic
 hi @string guifg=#A3BE8C gui=italic
-hi @string.regex guifg=#8FBCBB gui=italic
+hi @string.regexp guifg=#8FBCBB gui=italic
 hi @string.escape guifg=#B48EAD gui=italic
 hi @character guifg=#A3BE8C gui=italic
 
