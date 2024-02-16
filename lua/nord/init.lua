@@ -219,7 +219,7 @@ hi Comment guifg=#616E88]] .. italic_comments .. [[
 
 hi Conceal guifg=NONE guibg=NONE
 hi Conditional guifg=#81A1C1
-hi Constant guifg=#D8DEE9
+hi Constant guifg=#D8DEE9 gui=italic
 hi Decorator guifg=#D08770
 hi Define guifg=#81A1C1
 hi Delimiter guifg=#ECEFF4
