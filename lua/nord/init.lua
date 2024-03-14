@@ -431,11 +431,11 @@ hi @function.builtin guifg=#88C0D0 gui=italic
 hi @module guifg=#D8DEE9 gui=italic
 hi @variable.member guifg=#88C0D0 gui=italic
 hi @property guifg=#D8DEE9 gui=italic
-hi @keyword guifg=#81A1C1 gui=italic
-hi @keyword.function guifg=#88C0D0 gui=italic
-hi @keyword.return guifg=#88C0D0 gui=italic
-hi @keyword.operator guifg=#88C0D0 gui=italic
-hi @keyword.repeat guifg=#81A1C1 gui=italic
+hi @keyword guifg=#81A1C1
+hi @keyword.function guifg=#88C0D0
+hi @keyword.return guifg=#88C0D0
+hi @keyword.operator guifg=#88C0D0
+hi @keyword.repeat guifg=#81A1C1
 hi @string guifg=#A3BE8C gui=italic
 hi @string.regexp guifg=#8FBCBB gui=italic
 hi @string.escape guifg=#B48EAD gui=italic
