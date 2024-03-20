@@ -380,7 +380,7 @@ hi! link @markup.underline Underline
 "hi! link @variable.builtin Keyword
 hi! link @keyword.directive PreProc
 hi! link @keyword.directive.define Define
-hi! link @keyword.storage StorageClass
+hi! link @keyword.modifier StorageClass
 hi! link @keyword.conditional Conditional
 hi @keyword.debug guifg=#616E88
 
